@@ -32,7 +32,7 @@ export default function Partnerships() {
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem', lineHeight: 1.7 }}>
                 We partner with local governments to design and implement regional waste diversion strategies, extending landfill lifespans and meeting sustainability mandates.
               </p>
-              <Link href="/contact" style={{ fontWeight: 600, color: 'var(--accent)', textDecoration: 'none' }} onMouseOver={e => e.target.style.textDecoration='underline'} onMouseOut={e => e.target.style.textDecoration='none'}>Partner with us &rarr;</Link>
+              <Link href="/contact" className="hover-underline" style={{ fontWeight: 600 }}>Partner with us &rarr;</Link>
             </div>
 
             <div className="card animate-fade-in-up delay-100" style={{ borderLeft: '4px solid var(--accent)' }}>
@@ -40,7 +40,7 @@ export default function Partnerships() {
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem', lineHeight: 1.7 }}>
                 Collaborating to bring green jobs, capital investment, and sustainable industrial growth to Northern Minnesota communities.
               </p>
-              <Link href="/contact" style={{ fontWeight: 600, color: 'var(--accent)' }}>Partner with us &rarr;</Link>
+              <Link href="/contact" className="hover-underline" style={{ fontWeight: 600 }}>Partner with us &rarr;</Link>
             </div>
 
             <div className="card animate-fade-in-up" style={{ borderLeft: '4px solid var(--accent)' }}>
@@ -48,7 +48,7 @@ export default function Partnerships() {
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem', lineHeight: 1.7 }}>
                 Establishing long-term offtake agreements for forestry residuals, bark, and mill scrap, turning disposal costs into sustainable value.
               </p>
-              <Link href="/feedstock-suppliers" style={{ fontWeight: 600, color: 'var(--accent)' }}>Become a supplier &rarr;</Link>
+              <Link href="/feedstock-suppliers" className="hover-underline" style={{ fontWeight: 600 }}>Become a supplier &rarr;</Link>
             </div>
 
             <div className="card animate-fade-in-up delay-100" style={{ borderLeft: '4px solid var(--accent)' }}>
@@ -56,7 +56,7 @@ export default function Partnerships() {
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem', lineHeight: 1.7 }}>
                 Working with engineering, logistics, and environmental consulting firms to execute complex infrastructure developments and carbon credit methodologies.
               </p>
-              <Link href="/contact" style={{ fontWeight: 600, color: 'var(--accent)' }}>Partner with us &rarr;</Link>
+              <Link href="/contact" className="hover-underline" style={{ fontWeight: 600 }}>Partner with us &rarr;</Link>
             </div>
 
           </div>

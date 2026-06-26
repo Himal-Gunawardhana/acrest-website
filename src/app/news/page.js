@@ -26,16 +26,7 @@ export default function News() {
         <div className="container" style={{ maxWidth: '900px' }}>
           <div className="animate-fade-in-up delay-100" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '4rem', justifyContent: 'center' }}>
             {categories.map((cat, i) => (
-              <span key={i} style={{ 
-                padding: '0.5rem 1.25rem', 
-                backgroundColor: 'var(--bg-light)', 
-                border: '1px solid var(--border-color)', 
-                borderRadius: '30px', 
-                fontSize: '0.95rem', 
-                color: 'var(--text-main)', 
-                cursor: 'pointer',
-                transition: 'all var(--transition-fast)'
-              }} onMouseOver={e => {e.target.style.backgroundColor='var(--primary)'; e.target.style.color='#fff'; e.target.style.borderColor='var(--primary)'}} onMouseOut={e => {e.target.style.backgroundColor='var(--bg-light)'; e.target.style.color='var(--text-main)'; e.target.style.borderColor='var(--border-color)'}}>
+              <span key={i} className="category-badge">
                 {cat}
               </span>
             ))}
