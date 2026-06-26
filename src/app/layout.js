@@ -1,9 +1,13 @@
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ 
+  subsets: ["latin"],
+  variable: '--font-outfit'
+});
 
 export const metadata = {
   title: "Acrest Waste Solutions | Environmental Infrastructure & Resource Recovery",
@@ -14,12 +18,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
           <Navbar />
           <main style={{ flex: 1 }}>{children}</main>
           <Footer />
         </div>
+        <GoogleAnalytics gaId="G-PLACEHOLDER" />
       </body>
     </html>
   );

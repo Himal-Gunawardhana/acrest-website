@@ -12,37 +12,49 @@ export default function IndustriesServed() {
 
   return (
     <>
-      <section className="py-4 text-center bg-white" style={{ padding: '6rem 2rem 4rem' }}>
-        <div className="container" style={{ maxWidth: '800px' }}>
-          <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: 'var(--primary)' }}>Industries Served</h1>
-          <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)' }}>
+      <section className="py-lg text-center" style={{ 
+        position: 'relative',
+        color: '#fff',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0, bottom: 0,
+          background: 'linear-gradient(135deg, var(--secondary-dark), var(--primary-dark))',
+          zIndex: -1
+        }}></div>
+        <div className="container animate-fade-in-up" style={{ maxWidth: '800px' }}>
+          <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: '#fff' }}>Industries Served</h1>
+          <p style={{ fontSize: '1.3rem', color: 'rgba(255,255,255,0.9)' }}>
             Creating value across the supply chain, from raw material generation to final end-use applications.
           </p>
         </div>
       </section>
 
-      <section className="py-4" style={{ backgroundColor: 'var(--bg-light)' }}>
+      <section className="py-lg bg-light">
         <div className="container">
           <div className="grid grid-3">
             {industries.map((ind, i) => (
-              <div key={i} style={{ backgroundColor: '#fff', padding: '2.5rem', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', borderTop: '4px solid var(--accent)' }}>
-                <h3 style={{ color: 'var(--primary)', marginBottom: '1rem' }}>{ind.name}</h3>
-                <p style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>{ind.description}</p>
+              <div key={i} className={`card animate-fade-in-up delay-${(i % 3) * 100}`} style={{ borderTop: '4px solid var(--accent)' }}>
+                <h3 style={{ color: 'var(--primary)', marginBottom: '1rem', fontSize: '1.5rem' }}>{ind.name}</h3>
+                <p style={{ color: 'var(--text-muted)', lineHeight: 1.7, fontSize: '1.05rem' }}>{ind.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-4 bg-white text-center">
-        <div className="container" style={{ maxWidth: '700px' }}>
-          <h2 className="mb-4">Don't see your industry?</h2>
-          <p className="mb-4" style={{ fontSize: '1.1rem', color: 'var(--text-muted)' }}>
+      <section className="py-lg bg-white text-center">
+        <div className="container animate-fade-in-up" style={{ maxWidth: '700px' }}>
+          <h2 className="mb-4" style={{ fontSize: '2.5rem' }}>Don't see your industry?</h2>
+          <p className="mb-4" style={{ fontSize: '1.2rem', color: 'var(--text-muted)', lineHeight: 1.8 }}>
             Our processing capabilities are highly adaptable. If you generate large volumes of organic waste or have a specific application for carbon products, we can develop a tailored solution.
           </p>
-          <Link href="/contact" className="btn btn-primary" style={{ padding: '1rem 2rem' }}>
-            Contact Our Team
-          </Link>
+          <div style={{ marginTop: '2.5rem' }}>
+            <Link href="/contact" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.15rem' }}>
+              Contact Our Team
+            </Link>
+          </div>
         </div>
       </section>
     </>
